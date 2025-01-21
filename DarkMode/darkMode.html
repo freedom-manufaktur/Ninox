@@ -5,8 +5,10 @@
     <meta name='viewport' content='width=device-width, initial-scale=1'>
 <script>
 var styleLink =  "https://raw.githubusercontent.com/freedom-manufaktur/Ninox/refs/heads/phillip_darkModeStylesheet/DarkMode/custom.css"
-var styleResponse = await fetch(styleLink)
-var styles = await styleResponse.text()
+var styles;
+fetch(styleLink)
+	.then(response => response.text())
+	.then(data => styles = data)
 var styleSheet = document.createElement('style')
 styleSheet.textContent = styles
 document.head.appendChild(styleSheet)
