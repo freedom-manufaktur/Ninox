@@ -2,14 +2,17 @@ html[data-theme='dark'] {
   filter: invert(95%) hue-rotate(180deg);
 } 
 html[data-theme='dark'] header {
-  filter: invert(95%) hue-rotate(180deg);
-} 
-html[data-theme='dark'][role=toolbar] {
-  filter: invert(95%) hue-rotate(180deg);
-} 
-html[data-theme='dark'] [role=tab] {
-  filter: invert(95%) hue-rotate(180deg);
-} 
+    filter: invert(100%) hue-rotate(180deg);
+}
+html[data-theme='dark'] div[role=toolbar] {
+    filter: invert(100%) hue-rotate(180deg);
+}
+html[data-theme='dark'] .sc-jwaPLR.idRero {
+    filter: invert(100%) hue-rotate(180deg);
+}
+html[data-theme='dark'] .tab.selected {
+    filter: invert(95%) hue-rotate(180deg);
+}
 html[data-theme='dark'] img, html[data-theme='dark'] video, html[data-theme='dark'] iframe{
   filter: invert(95%) hue-rotate(180deg);
 } 

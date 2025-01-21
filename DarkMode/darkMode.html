@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang='en'>
+  <head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+<script>
+var styleLink =  "https://raw.githubusercontent.com/freedom-manufaktur/Ninox/refs/heads/main/DarkMode/custom.css"
+var styleSheet = document.createElement('link');
+styleSheet.href = styleLink
+document.head.appendChild(styleSheet);
+var darkSwitch = document.getElementById('darkSwitch');
+if (darkSwitch) {
+ var darkThemeSelected =
+    localStorage.getItem('darkSwitch') !== null &&
+    localStorage.getItem('darkSwitch') === 'dark';
+  darkSwitch.checked = darkThemeSelected
+  darkThemeSelected
+    ? document.querySelector('.no-touch').setAttribute('data-theme', 'dark')
+    : document.querySelector('.no-touch').removeAttribute('data-theme')}
+window.addEventListener('change', function(){
+  if (darkSwitch.checked) {
+    document.querySelector('.no-touch').setAttribute('data-theme', 'dark');
+    localStorage.setItem('darkSwitch', 'dark');
+  } else {
+    document.querySelector('.no-touch').removeAttribute('data-theme');
+    localStorage.removeItem('darkSwitch');
+  }}
+);
+jQuery(".bootstrap5").detach().prependTo("div[class='Icons-hhKnnv hQmUtb']");
+setTimeout(function(){document.querySelector('.nx-button-text[role=button]').click()}, 1)
+</script>
+</head>
+<body>
+	<div class='bootstrap5' title='Dark Theme'>
+      		<div class='nav-link'>
+        		<div class='form-check form-switch'>
+          			<input type='checkbox' style='height:16px' class='form-check-input' id='darkSwitch'>
+        		</div>
+      		</div>
+    	</div>
+</body>
+</html>
