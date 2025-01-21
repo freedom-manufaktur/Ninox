@@ -4,9 +4,13 @@
     <meta charset='utf-8'>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
 <script>
-var styleLink =  "https://raw.githubusercontent.com/freedom-manufaktur/Ninox/refs/heads/main/DarkMode/custom.css"
-var styleSheet = document.createElement('link');
-styleSheet.href = styleLink
+var styleLink =  "https://raw.githubusercontent.com/freedom-manufaktur/Ninox/refs/heads/phillip_darkModeStylesheet/DarkMode/custom.css";
+var styles;
+fetch(styleLink)
+  .then(response => response.text())
+  .then(data => styles = data);
+var styleSheet = document.createElement('styles');
+styleSheet.textContent = styles
 document.head.appendChild(styleSheet);
 var darkSwitch = document.getElementById('darkSwitch');
 if (darkSwitch) {
