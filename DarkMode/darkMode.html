@@ -5,9 +5,11 @@
     <meta name='viewport' content='width=device-width, initial-scale=1'>
 <script>
 var styleLink =  "https://raw.githubusercontent.com/freedom-manufaktur/Ninox/refs/heads/main/DarkMode/custom.css"
-var styleSheet = document.createElement('link');
-styleSheet.href = styleLink
-document.head.appendChild(styleSheet);
+var styleSheet = document.createElement('style')
+fetch(styleLink)
+	.then(response => response.text())
+	.then(data => styleSheet.textContent = data)
+	.then(document.head.appendChild(styleSheet));
 var darkSwitch = document.getElementById('darkSwitch');
 if (darkSwitch) {
  var darkThemeSelected =
