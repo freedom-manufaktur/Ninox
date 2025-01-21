@@ -9,7 +9,7 @@ var styles;
 fetch(styleLink)
   .then(response => response.text())
   .then(data => styles = data);
-var styleSheet = document.createElement('styles');
+var styleSheet = document.createElement('style');
 styleSheet.textContent = styles
 document.head.appendChild(styleSheet);
 var darkSwitch = document.getElementById('darkSwitch');
